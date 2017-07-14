@@ -47,8 +47,8 @@ SERVERBIN="${APP}_server.${PLATFORM}"
 # Check the arguments provided
 case ${PLATFORM} in
         "ukvm" )
-                CMD_C="./${CLIENTPATH}/ukvm-bin ${NET}${C_TAP} ./${CLIENTPATH}/${CLIENTBIN}";
-                CMD_S="./${SERVERPATH}/ukvm-bin ${NET}${S_TAP} ./${SERVERPATH}/${SERVERBIN}";
+                CMD_C="sudo ./${CLIENTPATH}/ukvm-bin ${NET}${C_TAP} ./${CLIENTPATH}/${CLIENTBIN}";
+                CMD_S="sudo ./${SERVERPATH}/ukvm-bin ${NET}${S_TAP} ./${SERVERPATH}/${SERVERBIN}";
         ;;
         * ) echo "Invalid hypervisor selected"; exit
 esac
